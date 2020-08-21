@@ -1,7 +1,6 @@
 import React from 'react';
+import Button from '.';
 
-import { Button } from '../../dist/index';
-console.log(Button);
 export default {
   title: 'Example/Button',
   component: Button,

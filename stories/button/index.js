@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FilledButton } from './button.style';
 
-const Button = () => <FilledButton>Testando</FilledButton>;
+const Button = () => <FilledButton disabled>Testandso</FilledButton>;
 
 export default Button;
