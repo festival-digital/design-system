@@ -1,0 +1,6 @@
+# git ignore file
+
+node_modules
+dist
+storybook-static
+.env
