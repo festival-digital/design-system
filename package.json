@@ -1,21 +1,23 @@
 {
-  "name": "design-system",
-  "version": "1.0.0",
+  "name": "@resystem/design-system",
+  "version": "0.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build:production": "NODE_ENV=production webpack"
+    "build:production": "NODE_ENV=production webpack",
+    "transpile": "babel stories -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/festival-digital/design-system.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Midia NINJA",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/festival-digital/design-system/issues"
   },
@@ -27,10 +29,14 @@
     "@storybook/addon-essentials": "^6.0.16",
     "@storybook/addon-links": "^6.0.16",
     "@storybook/react": "^6.0.16",
+    "babel": "^6.23.0",
+    "babel-cli": "^7.0.0-beta.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "react-is": "^16.13.1",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.1"
   },
   "dependencies": {
     "styled-components": "^5.1.1"

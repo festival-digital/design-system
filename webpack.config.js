@@ -1,25 +1,30 @@
-const path = require('path');
+const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'production',
   entry: './stories/index.js',
+  externals: [nodeExternals()],
   output: {
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.min.js',
-    chunkFilename: 'bundle.chunk.js',
+    library: '',
+    libraryTarget: 'commonjs'
   },
+  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
-      {
-        test: /\.js(x)?$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-        },
+     {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       },
-    ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-};
+      { 
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.resolve(__dirname, './src')
+      }
+    ]
+  }
+}
