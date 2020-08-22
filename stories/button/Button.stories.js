@@ -4,32 +4,21 @@ import Button from '.';
 export default {
   title: 'Example/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => (
+  <Button {...args}>Texto</Button>
+);
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
+export const Filled = Template.bind({});
+Filled.args = {};
+
+export const Outline = Template.bind({});
+Outline.args = {
+  outline: true,
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+<Button outline={true}>
+  sahdusha
+</Button>

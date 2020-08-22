@@ -1,4 +1,3 @@
-import defaultTheme from '../theme';
-
+import './assets/reset.css';
+export { default as defaultTheme } from '../theme';
 export { default as Button } from './button';
-export const theme = defaultTheme;
