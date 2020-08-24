@@ -15,12 +15,12 @@ export const WhiteButton = styled.button`
     font-style: normal;
     font-size: ${props.small ? props.theme.fontSize.xs : props.theme.fontSize.sm};
     font-weight: ${props.theme.fontWeight.medium};
-    color: ${props.theme.brandColor.secondary.darkest};
+    color: ${props.theme.neutralColor[1]};
     border-style: solid;
     border-color: ${props.theme.neutralColor[1]};
     border-width: ${props.theme.borderWidth.thin};
     border-radius: ${props.theme.borderRadius.sm};
-    background-color: ${props.theme.neutralColor[1]};
+    background-color: transparent;
     padding: ${props.small ? props.theme.spacingSquish.nano : props.theme.spacingSquish.xs};
     cursor: pointer;
   `}
@@ -32,12 +32,12 @@ export const DarkButton = styled.button`
     font-style: normal;
     font-size: ${props.small ? props.theme.fontSize.xs : props.theme.fontSize.sm};
     font-weight: ${props.theme.fontWeight.medium};
-    color: ${props.theme.neutralColor[1]};
+    color: ${props.theme.brandColor.secondary.darkest};
     border-style: solid;
     border-color: ${props.theme.brandColor.secondary.darkest};
     border-width: ${props.theme.borderWidth.thin};
     border-radius: ${props.theme.borderRadius.sm};
-    background-color: ${props.theme.brandColor.secondary.darkest};
+    background-color: transparent;
     padding: ${props.small ? props.theme.spacingSquish.nano : props.theme.spacingSquish.xs};
     cursor: pointer;
   `}
