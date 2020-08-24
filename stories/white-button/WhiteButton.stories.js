@@ -1,16 +1,17 @@
 import React from 'react';
-import Button from '.';
+import WhiteButton from '.';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/WhiteButton',
+  component: WhiteButton,
   argTypes: {},
+  decorators: [(Story) => <div style={{ padding: '30px', width: '100%', height: '100%', background: '#000000' }}><Story/></div>]
 };
 
 const Template = (args) => (
-  <Button {...args}>
+  <WhiteButton {...args}>
     Texto
-  </Button>
+  </WhiteButton>
 );
 
 export const Filled = Template.bind({});
@@ -55,4 +56,3 @@ SmallUnableOutline.args = {
   disabled: true,
   small: true,
 };
-

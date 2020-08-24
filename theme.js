@@ -63,7 +63,7 @@ export default ({
     far: "120%",
     further: "200%",
   },
-  fonWeight: {
+  fontWeight: {
     thin: 300,
     light: 300,
     regular: "normal",
