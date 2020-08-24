@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "eslint": "eslint \"./**/*.js\" \"./**/*.jsx\"",
-    "eslint:fix": "eslint --fix \"./**/*.js\" \"./**/*.jsx\"",
+    "eslint": "eslint \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
+    "eslint:fix": "eslint --fix \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
     "build:production": "NODE_ENV=production webpack"
   },
   "repository": {
@@ -36,14 +36,14 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
     "clean-webpack-plugin": "^3.0.0",
-    "eslint": "^7.7.0",
+    "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "prettier": "^2.0.5",
     "react-is": "^16.13.1",
     "webpack": "^4.44.1",
@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "styled-components": "^5.1.1",
     "url-loader": "^4.1.0"

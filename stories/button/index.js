@@ -2,29 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FilledButton, OutlineButton } from './button.style';
 
-const Button = (props) => {
-  if (props.outline) {
-    return (
-      <OutlineButton {...props}>
-        {props.children}
-      </OutlineButton>
-    );
+const Button = ({ outline, children, ...props }) => {
+  if (outline) {
+    return <OutlineButton {...props}>{children}</OutlineButton>;
   }
 
-  return (
-    <FilledButton {...props}>
-      {props.children}
-    </FilledButton>
-  );
+  return <FilledButton {...props}>{children}</FilledButton>;
 };
 
 Button.propTypes = {
   outline: PropTypes.bool,
   white: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.string,
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
 };
 
 Button.defaultProps = {
