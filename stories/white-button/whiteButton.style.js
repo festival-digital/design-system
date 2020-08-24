@@ -12,7 +12,7 @@ export const FilledButton = styled.button`
     border-width: ${props.theme.borderWidth.thin};
     border-radius: ${props.theme.borderRadius.sm};
     background-color: ${props.theme.neutralColor[1]};
-    padding: ${props.theme.spacingSquish.xs};
+    padding: ${props.small ? props.theme.spacingSquish.nano : props.theme.spacingSquish.xs};
     cursor: pointer;
 
     &:disabled {
@@ -36,7 +36,7 @@ export const OutlineButton = styled.button`
     border-width: ${props.theme.borderWidth.thin};
     background-color: transparent;
     border-radius: ${props.theme.borderRadius.sm};
-    padding: ${props.theme.spacingSquish.xs};
+    padding: ${props.small ? props.theme.spacingSquish.nano : props.theme.spacingSquish.xs};
     cursor: pointer;
 
     &:hover:enabled {
