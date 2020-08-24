@@ -1,6 +1,6 @@
 {
   "name": "@resystem/design-system",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -51,7 +51,9 @@
     "webpack-node-externals": "^2.5.1"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.4.0",
     "react": "^16.13.1",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "url-loader": "^4.1.0"
   }
 }
