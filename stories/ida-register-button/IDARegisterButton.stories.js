@@ -7,6 +7,13 @@ export default {
   argTypes: {},
 };
 
+/**
+ * This is a component template to be render 
+ * @param {object} args proptypes to be pass to the component 
+ * @param {boolean} args.small flag for indentify if your components is small or large
+ * @param {boolean} args.dark flag for indentify if your components is defaut mode or dark mode
+ * @returns {React.Compoenent}
+ */
 const Template = (args) => (
   <IDARegisterButton {...args} />
 );

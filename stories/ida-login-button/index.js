@@ -7,6 +7,13 @@ import {
 const BASE_ICON_URI = "http://ida-design-system-assets.s3-us-west-2.amazonaws.com/icons";
 const ALT_ICON_TEXT = "Essa é a Logo da Identidade Digital Ativista, a logo é sigla da marca onde cada letra é de uma cor especifica (a letra I é verde, a letra D é vermelha e a A é roxo) e formam formas geométricas.";
 
+/**
+ * This is the IDALoginButton component 
+ * @param {object} args proptypes to be pass to the component 
+ * @param {boolean} args.small flag for indentify if your components is small or large
+ * @param {boolean} args.dark flag for indentify if your components is defaut mode or dark mode
+ * @returns {React.Compoenent}
+ */
 const IDALoginButton = (props) => {
   if (props.dark) {
     return (
@@ -36,10 +43,6 @@ const IDALoginButton = (props) => {
 IDALoginButton.propTypes = {
   dark: PropTypes.bool,
   small: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.string,
-  ]).isRequired,
 };
 
 IDALoginButton.defaultProps = {
