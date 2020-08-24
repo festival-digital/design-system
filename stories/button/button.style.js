@@ -6,12 +6,12 @@ export const FilledButton = styled.button`
     font-style: normal;
     font-size: ${props.small ? props.theme.fontSize.xs : props.theme.fontSize.sm};
     font-weight: ${props.theme.fontWeight.medium};
-    color: ${props.theme.neutralColor[1]};
+    color: ${props.white ? props.theme.brandColor.secondary.darkest : props.theme.neutralColor[1]};
     border-style: solid;
-    border-color: ${props.theme.brandColor.primary.medium};
+    border-color: ${props.white ? props.theme.neutralColor[1] : props.theme.brandColor.primary.medium};
     border-width: ${props.theme.borderWidth.thin};
     border-radius: ${props.theme.borderRadius.sm};
-    background-color: ${props.theme.brandColor.primary.medium};
+    background-color: ${props.white ? props.theme.neutralColor[1] : props.theme.brandColor.primary.medium};
     padding: ${props.small ? props.theme.spacingSquish.nano : props.theme.spacingSquish.xs};
     cursor: pointer;
 
@@ -29,9 +29,9 @@ export const OutlineButton = styled.button`
     font-style: normal;
     font-size: ${props.small ? props.theme.fontSize.xs : props.theme.fontSize.sm};
     font-weight: ${props.theme.fontWeight.medium};
-    color: ${props.theme.brandColor.primary.medium};
+    color: ${props.white ? props.theme.neutralColor[1] : props.theme.brandColor.primary.medium};
     border-style: solid;
-    border-color: ${props.theme.brandColor.primary.medium};
+    border-color: ${props.white ? props.theme.neutralColor[1] : props.theme.brandColor.primary.medium};
     border-width: ${props.theme.borderWidth.thin};
     background-color: transparent;
     border-radius: ${props.theme.borderRadius.sm};
@@ -39,8 +39,8 @@ export const OutlineButton = styled.button`
     cursor: pointer;
 
     &:hover:enabled {
-      color: ${props.theme.neutralColor[1]};
-      background-color: ${props.theme.brandColor.primary.medium};    
+      color: ${props.white ? props.theme.brandColor.secondary.darkest : props.theme.neutralColor[1]};
+      background-color: ${props.white ? props.theme.neutralColor[1] : props.theme.brandColor.primary.medium};    
     }
 
     &:disabled {

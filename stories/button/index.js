@@ -20,6 +20,7 @@ const Button = (props) => {
 
 Button.propTypes = {
   outline: PropTypes.bool,
+  white: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.string,
@@ -28,6 +29,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   outline: false,
+  white: false,
 };
 
 export default Button;
