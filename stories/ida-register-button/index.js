@@ -10,8 +10,8 @@ const ALT_ICON_TEXT = "Essa é a Logo da Identidade Digital Ativista, a logo é 
 /**
  * This is the IDARegisterButton component 
  * @param {object} args proptypes to be pass to the component 
- * @param {boolean} args.small flag for indentify if your components is small or large
- * @param {boolean} args.dark flag for indentify if your components is defaut mode or dark mode
+ * @param {boolean} args.small flag for indentify if the component is small or large
+ * @param {boolean} args.dark flag for indentify if the component is defaut mode or dark mode
  * @returns {React.Component}
  */
 const IDARegisterButton = (props) => {
