@@ -7,26 +7,50 @@ export default {
   argTypes: {},
 };
 
+const defaultDecorator = (Story) => (
+  <div
+    style={{
+      padding: '30px',
+      width: '100%',
+      height: '100%',
+      background: '#1D1D1D',
+    }}
+  >
+    <Story />
+  </div>
+);
+
 const Template = (args) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState();
   return <InputText {...args} value={value} onChange={setValue} />;
 };
 
-export const InputTextComponent = Template.bind({});
-InputTextComponent.args = {
+export const Input = Template.bind({});
+Input.args = {
+  error: '',
+  id: 'Input',
   label: 'Nome',
+  type: 'text',
 };
-InputTextComponent.decorators = [
-  (Story) => (
-    <div
-      style={{
-        padding: '30px',
-        width: '100%',
-        height: '100%',
-        background: '#1D1D1D',
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
+
+Input.decorators = [defaultDecorator];
+
+export const InputWithError = Template.bind({});
+InputWithError.args = {
+  error: 'uma mensagem de erro',
+  id: 'InputWithError',
+  label: 'Nome',
+  type: 'text',
+};
+
+InputWithError.decorators = [defaultDecorator];
+
+export const InputPassword = Template.bind({});
+InputPassword.args = {
+  error: '',
+  id: 'InputPassword',
+  label: 'Senha',
+  type: 'password',
+};
+
+InputPassword.decorators = [defaultDecorator];
