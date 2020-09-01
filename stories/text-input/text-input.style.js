@@ -96,7 +96,6 @@ export const InputTextStyle = styled.input`
   }
 
   &:focus ~ .icon {
-    /* &.validation ~ .icon */
     visibility: visible;
     pointer-events: visiblePainted;
     cursor: pointer;

@@ -21,38 +21,16 @@ const hasError = (error) => error.length > 0;
 const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
   const inputNode = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
+  const [focus, setFocus] = useState(false);
 
   const handleOnChange = (event) => {
     if (onChange) onChange(event.target.value);
   };
 
-  const handleOnFocus = (event) => {
-    if (event.target.value.length > 0) {
-      inputNode.current.classList.add('hasValue');
-      inputNode.current.classList.add('validation');
-    } else {
-      inputNode.current.classList.remove('hasValue');
-      inputNode.current.classList.remove('validation');
-    }
-  };
-
   const toggleShowPassword = () => {
     setShowPassword((prev) => !prev);
   };
-
-  useEffect(() => {
-    inputNode.current.addEventListener('focusout', handleOnFocus);
-
-    return () => {
-      inputNode.current.removeEventListener('focusout', handleOnFocus);
-    };
-  }, [inputNode]);
-
-  useEffect(() => {
-    if (showPassword) inputNode.current.type = 'text';
-    else inputNode.current.type = type;
-  }, [showPassword, inputNode]);
-
+  
   return (
     <InputGroup>
       <InputBase>
@@ -60,9 +38,15 @@ const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
           {...props}
           value={value}
           onChange={handleOnChange}
+          onFocus={() => {
+            setFocus(true);
+          }}
+          onBlur={() => {
+            setFocus(false);
+          }}
           id={id}
-          ref={inputNode}
-          type={type}
+          className={value.length ? 'hasValue' : ''}
+          type={showPassword ? 'text' : type}
         />
         <LabelStyle
           htmlFor={id}
