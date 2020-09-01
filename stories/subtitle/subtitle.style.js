@@ -10,7 +10,7 @@ export const Subtitle = styled.h2`
   `}
 `;  
 
-export const Subtitlesmall = styled.h3`
+export const SubtitleSmall = styled.h3`
   ${(props) => `
     font-style: ${props.theme.fontFamily.primary};
     font-weight: ${props.theme.fontWeight.bold};
