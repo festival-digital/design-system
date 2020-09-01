@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-import checkIcon from '../assets/checkIcon.svg'
 
 export const InputGroup = styled.form`
   display: block;
-`
-
+`;
 
 export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
   ${({ theme }) => `
@@ -47,14 +45,7 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
       box-shadow: 0 0 0;
     }
 
-    &:checked + label:after {
-    content: url(${checkIcon});
-    position: absolute;
-    left: 2px;
-    top: 3px;
-    background: transparent;
-    color: #1D1D1D;
-    }
+
     `}
 `;
 
