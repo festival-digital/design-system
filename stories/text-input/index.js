@@ -41,12 +41,15 @@ const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
   };
 
   useEffect(() => {
+    if(inputNode && inputNode.current && inputNode.current.value.length > 0 )
+      inputNode.current.classList.add('hasValue');
+
     inputNode.current.addEventListener('focusout', handleOnFocus);
 
     return () => {
       inputNode.current.removeEventListener('focusout', handleOnFocus);
     };
-  }, [inputNode]);
+  }, [inputNode, inputNode.current]);
 
   useEffect(() => {
     if (showPassword) inputNode.current.type = 'text';
