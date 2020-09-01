@@ -1,7 +1,6 @@
 import React from 'react';
 import Subtitle from '.';
  
-
 export default {
   title: 'Example/Subtitle',
   component: Subtitle,
@@ -10,26 +9,9 @@ export default {
 
 const Template = (args) => <Subtitle {...args}>Subtítulo</Subtitle>;
 
-/**
- * This is a component template to be render
- * @param {object} args proptypes to be pass to the component
- * @param {boolean} args.children component or string to be render inside the component
- * @returns {React.Component}
- */
-
-
- 
-
-
-export const Subtitlesmall = Template.bind({});
-Subtitlesmall .args = {
-  type: 'h3',
-  
-};
-
-
- 
-Subtitlesmall.decorators = [
+export const Default = Template.bind({});
+Default.args = {};
+Default.decorators = [
   (Story) => (
     <div
       style={{
@@ -44,10 +26,18 @@ Subtitlesmall.decorators = [
   ),
 ];
 
- 
-export const Default = Template.bind({});
-Default.args = {};
-Default.decorators = [
+/**
+ * This is a component template to be render
+ * @param {object} args proptypes to be pass to the component
+ * @param {boolean} args.children component or string to be render inside the component
+ * @returns {React.Component}
+ */
+export const SubtitleSmall = Template.bind({});
+SubtitleSmall .args = {
+  type: 'h3',
+};
+
+SubtitleSmall.decorators = [
   (Story) => (
     <div
       style={{

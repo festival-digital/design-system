@@ -1,31 +1,47 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Subtitle as SubtitleComponent } from './subtitle.style';
-import { Subtitlesmall as SubtitlesmallComponent } from './subtitle.style';
+import { SubtitleSmall as SubtitleSmallComponent } from './subtitle.style';
 
 /**
- * This is the Subtitle component
+ * function that render default component
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const Subtitle = ({ children }) => (
-  <SubtitleComponent>
+const renderDefault = ({ children, ...props }) => (
+  <SubtitleComponent {...props}>
     {children}
   </SubtitleComponent>
 );
+
 /**
- * This is the Subtitle component
+ * functiom the render small component
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const Subtitlesmall = ({ children }) => (
-  <SubtitlesmallComponent>
+const renderSmall = ({ children, ...props }) => (
+  <SubtitleSmallComponent {...props}>
     {children}
-  </SubtitlesmallComponent>
+  </SubtitleSmallComponent>
 );
+
+const types = {
+  h2: renderDefault,
+  h3: renderSmall, 
+};
+
+const Subtitle = ({ type, ...props }) => {
+  if (!types[type]) return renderDefault(props);
+  return types[type](props);
+}
 
 Subtitle.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  type: PropTypes.string,
+};
+
+Subtitle.defaultProps = {
+  type: 'h2',
 };
 
 export default Subtitle;
