@@ -7,7 +7,7 @@ export const Text = styled.text`
       font-style: ${props.theme.fontFamily.primary};
       font-weight: ${props.theme.fontWeight.regular};
       font-size: ${props.theme.fontSize.xs};
-      line-height: ${props.theme.lineHeight.compact};
+      line-height: ${props.theme.lineHeight.far};
       color: ${props.theme.brandColor.secondary.medium};
     `}
   }
@@ -17,7 +17,7 @@ export const Text = styled.text`
       font-style: ${props.theme.fontFamily.primary};
       font-weight: ${props.theme.fontWeight.regular};
       font-size: ${props.theme.fontSize.sm};
-      line-height: ${props.theme.lineHeight.compact};
+      line-height: ${props.theme.lineHeight.far};
       color: ${props.theme.brandColor.secondary.medium};
     `}
   }
