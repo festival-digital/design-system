@@ -26,11 +26,11 @@ export const LabelStyle = styled.label`
 
   color: ${({ theme }) => theme.neutralColor[5]};
   font-family: ${({ theme }) => theme.fontFamily.primary};
-  font-size: ${({ theme }) => theme.fontSize.sm};
+  font-size: ${({ theme }) => theme.fontSize.xxs};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
 
   transform-origin: top left;
-  transform: translate(14px, 14px) scale(1);
+  transform: translate(14px, 16px) scale(1);
 
   transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
     transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
