@@ -41,5 +41,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-console': 'off',
     'no-unused-vars': ['warn', { argsIgnorePattern: 'next' }], // ignora erro de variável que não vou usar
+    'linebreak-style': 0,
+    'no-array-index-key': false,
   },
 };
