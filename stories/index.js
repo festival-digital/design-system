@@ -14,3 +14,4 @@ export { default as TextInput } from './text-input';
 export { default as ButtonText } from './button-text';
 export { default as Toaster } from './toaster';
 export { default as Title } from './title';
+export { default as SwitchButton } from './switch-button';
