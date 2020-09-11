@@ -23,6 +23,7 @@ const getBorderRadiusByPosittion = (position, radius) => {
 
 export const SwitchButtonOption = styled.button`
   ${(props) => `
+    width: 50%;
     min-width: ${props.small ? '101px' : '170px'};
     padding: ${props.theme.spacingSquish.xs};
     border-color: ${props.actived ? props.theme.brandColor.primary.medium : 'transparent'};
