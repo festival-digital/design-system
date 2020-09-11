@@ -3,5 +3,5 @@ export default (classObject) => {
   const classes = keys
     .map((key) => (classObject[key] ? key : false))
     .filter((item) => item !== false);
-  return classes.join(` `);
+  return classes.join(` `).trim();
 };

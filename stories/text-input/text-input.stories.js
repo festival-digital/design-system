@@ -21,7 +21,7 @@ const defaultDecorator = (Story) => (
 );
 
 const Template = (args) => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(`MALETTA`);
   return <InputText {...args} value={value} onChange={setValue} />;
 };
 
