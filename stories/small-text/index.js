@@ -7,8 +7,8 @@ import { Smalltext as SmalltextComponent } from './Smalltext.style';
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const Smalltext = ({ children }) => (
-  <SmalltextComponent>
+const Smalltext = ({ children, ...props }) => (
+  <SmalltextComponent {...props}>
     {children}
   </SmalltextComponent>
 );
