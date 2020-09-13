@@ -7,6 +7,7 @@ import {
   MessageBox
 } from './code-input.style';
 
+import IdGenerator from '../../util/IdGenerator';
 import buildClass from '../../util/buildClass';
 
 
@@ -16,14 +17,17 @@ const CodeInput = ({ error, id, label, onChange, type, value, ...props }) => {
   const [inputs,setInput] = useState(Array.apply('', Array(4)));
 
 useEffect( () => {
+  const a = new IdGenerator();
   console.log(inputs);
+  console.log('id',IdGenerator.new());
+
 }, []);
 
   return (
    <Container>
       <InputGroup>
       {
-        inputs.map( (input) => <InputBase />)
+        inputs.map( (input) => <InputBase key={23}/>)
       }
 
     </InputGroup>
