@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const InputGroup = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, minmax(64px, 100px));
+  grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, minmax(64px, 100px))`};
   grid-gap: 10px;
   justify-content: center;
   justify-items: center;
