@@ -17,7 +17,7 @@ const ALT_ICON_TEXT =
 const IDALoginButton = ({ dark, small, text, ...props }) => {
   if (dark) {
     return (
-      <DarkButton {...props}>
+      <DarkButton small={small} {...props}>
         <Icon
           src={`${BASE_ICON_URI}/dark-brand.svg`}
           alt={ALT_ICON_TEXT}
@@ -29,7 +29,7 @@ const IDALoginButton = ({ dark, small, text, ...props }) => {
   }
 
   return (
-    <WhiteButton {...props}>
+    <WhiteButton small={small} {...props}>
       <Icon
         src={`${BASE_ICON_URI}/white-brand.svg`}
         alt={ALT_ICON_TEXT}

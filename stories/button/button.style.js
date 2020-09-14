@@ -69,7 +69,7 @@ export const OutlineButton = styled.button`
         : props.theme.spacingSquish.xs
     };
     cursor: pointer;
-
+    
     &:hover:enabled {
       color: ${
         props.white
@@ -80,7 +80,7 @@ export const OutlineButton = styled.button`
         props.white
           ? props.theme.neutralColor[1]
           : props.theme.brandColor.primary.medium
-      };    
+      }; 
     }
 
     &:disabled {

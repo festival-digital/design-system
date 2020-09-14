@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 export const Icon = styled.img`
   ${(props) => `
-    width: 32px;
+    width: ${
+      props.small
+        ? '24px'
+        : '32px'
+    };
     height: 32px;
     margin-right: ${
       props.small
