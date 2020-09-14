@@ -18,11 +18,10 @@ const defaultDecorator = (Story) => (
   >
     <div
     style={{
-      padding: '30px',
-      width: '900px',
+      width: '320px',
       height: '300px',
       background: '#1D1D1D',
-      border: '2px solid white',
+      // border: '2px solid white',
     }}
     >
       <Story />
@@ -45,4 +44,14 @@ Input.args = {
 };
 
 Input.decorators = [defaultDecorator];
+
+export const InputWithError = Template.bind({});
+InputWithError.args = {
+  error: 'Código Inválido',
+  id: 'InputWithError',
+  label: 'Nome',
+};
+
+InputWithError.decorators = [defaultDecorator];
+
 
