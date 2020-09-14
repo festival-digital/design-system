@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Toaster, {ToasterNotification} from '.';
+import Toaster, { ToasterNotification } from '.';
 
 export default {
   title: 'Example/Toaster',
@@ -8,20 +8,20 @@ export default {
     position: {
       control: {
         type: 'inline-radio',
-        options: ['top-right','bottom-right','top-left','bottom-left'],
-     },
+        options: ['top-right', 'bottom-right', 'top-left', 'bottom-left'],
+      },
     },
     variant: {
       control: {
         type: 'inline-radio',
-        options: ['primary','secondary','success','warning','fail'],
-     },
+        options: ['primary', 'secondary', 'success', 'warning', 'fail'],
+      },
     },
-  id: { control: 'text' },
-  title: { control: 'text' },
-  description: { control: 'text' },
+    id: { control: 'text' },
+    title: { control: 'text' },
+    description: { control: 'text' },
 
- },
+  },
 };
 
 const toastList = [
@@ -55,18 +55,18 @@ const toastList = [
 ];
 
 const Template = (args) => {
-  const {variant, id, title, description, position} = args;
-  const toast = {variant, id, title, description};
-  const toastList = [toast] ;
+  const { variant, id, title, description, position } = args;
+  const toast = { variant, id, title, description };
+  const toastList = [toast];
   return (
-    <Toaster  toastList={toastList} position={position} />
+    <Toaster toastList={toastList} position={position} />
   );
 };
 
 export const ToasterComponent = Template.bind({});
 ToasterComponent.args = {
   id: 1,
-  title:'título',
+  title: 'título',
   description: 'descrição',
 };
 

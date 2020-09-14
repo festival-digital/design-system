@@ -91,7 +91,7 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
 
   return (
     <Container {...props}>
-      <InputGroup>
+      <InputGroup codeSize={codeSize}>
         {
           inputId.map((item, index) => {
             return (
