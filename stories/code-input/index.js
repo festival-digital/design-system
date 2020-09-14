@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Container,
@@ -18,10 +18,6 @@ import buildClass from '../../util/buildClass';
 const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => {
   const [inputId, setInputId] = useState(Array.apply(null, Array(codeSize)).map(() => enhancedCodeGenerator()));
   const [inputArray, setinputArray] = useState(Array.apply(null, Array(codeSize)).map(() => ''));
-
-  useEffect(() => {
-
-  }, []);
 
   const hasSpaceToAdd = (value, newArray) => {
     const filteredArray = newArray.filter((item) => item.length !== 0);
@@ -66,10 +62,10 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
     }
 
     // definir o focus no input escolhido anteriormente
-    if(hasSpaceToAdd(value, currentArray)){
-     const input = document.getElementById(identifier);
-     input.focus();
-     input.setSelectionRange(1, 1);
+    if (hasSpaceToAdd(value, currentArray)) {
+      const input = document.getElementById(identifier);
+      input.focus();
+      input.setSelectionRange(1, 1);
     }
 
   }
@@ -95,7 +91,7 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
         {
           inputId.map((item, index) => {
             return (
-              <InputBox key={item} className={buildClass({fail: hasError(error), filled: isFilled(inputArray)})}>
+              <InputBox key={item} className={buildClass({ fail: hasError(error), filled: isFilled(inputArray) })}>
                 <InputBase
                   id={item}
                   data-identifier={item}
@@ -108,7 +104,7 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
         }
       </InputGroup >
       <MessageBox>
-      <ErrorOutlineOutlinedIcon className={buildClass({fail: hasError(error)})} />
+        <ErrorOutlineOutlinedIcon className={buildClass({ fail: hasError(error) })} />
         <span>{error}</span>
       </MessageBox>
     </Container>
