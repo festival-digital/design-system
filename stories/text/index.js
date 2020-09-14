@@ -7,8 +7,8 @@ import { Text as TextComponent } from './text.style';
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const Text = ({ children }) => (
-  <TextComponent>
+const Text = ({ children, ...props }) => (
+  <TextComponent {...props}>
     {children}
   </TextComponent>
 );
