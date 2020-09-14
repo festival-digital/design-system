@@ -15,9 +15,9 @@ import buildClass from '../../util/buildClass';
 
 
 
-const CodeInput = ({ codeSize, error, id, label, onChange, type, value, ...props }) => {
+const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => {
   const [inputId, setInputId] = useState(Array.apply(null, Array(codeSize)).map(() => enhancedCodeGenerator()));
-  const [inputArray, setinputArray] = useState(Array.apply(null, Array(codeSize)).map((item, index) => ''));
+  const [inputArray, setinputArray] = useState(Array.apply(null, Array(codeSize)).map(() => ''));
 
   useEffect(() => {
 
@@ -82,7 +82,7 @@ const CodeInput = ({ codeSize, error, id, label, onChange, type, value, ...props
 
 
     setInputFocus(index, value, [...inputArray]);
-    setinputArray(newArray.filter((item, index) => index <= (codeSize - 1)));
+    setinputArray(newArray.filter((_, index) => index <= (codeSize - 1)));
     onChange(newArray.join(''));
   }
 
@@ -90,7 +90,7 @@ const CodeInput = ({ codeSize, error, id, label, onChange, type, value, ...props
   const isFilled = (array) => array.filter((item) => item.length !== 0).length === codeSize ? true : false;
 
   return (
-    <Container>
+    <Container {...props}>
       <InputGroup>
         {
           inputId.map((item, index) => {
@@ -118,7 +118,6 @@ const CodeInput = ({ codeSize, error, id, label, onChange, type, value, ...props
 CodeInput.propTypes = {
   codeSize: PropTypes.number,
   error: PropTypes.string,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
@@ -126,7 +125,6 @@ CodeInput.propTypes = {
 CodeInput.defaultProps = {
   codeSize: 4,
   error: '',
-  label: '',
   onChange: () => { },
   value: '',
 };

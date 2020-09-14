@@ -40,7 +40,6 @@ export const Input = Template.bind({});
 Input.args = {
   error: '',
   id: 'Input',
-  label: 'Nome',
 };
 
 Input.decorators = [defaultDecorator];
@@ -49,7 +48,6 @@ export const InputWithError = Template.bind({});
 InputWithError.args = {
   error: 'Código Inválido',
   id: 'InputWithError',
-  label: 'Nome',
 };
 
 InputWithError.decorators = [defaultDecorator];
