@@ -9,7 +9,8 @@ import { Button, IconWrapper } from './iconButton.style';
  * @param {boolean} args.children string or node to be render inside the button
  * @param {boolean} args.small flag for indentify if the component is small or large
  * @param {boolean} args.alt string used to image seo and acessibility
- * @param {boolean} args.icon string to the material icon reference
+ * @param {boolean} args.icon string to the material icon reference.
+ * Can be found here https://material.io/resources/icons/?icon=apps&style=baseline
  * @returns {React.Component}
  */
 const IconButton = ({

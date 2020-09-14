@@ -71,6 +71,8 @@ export const InputTextStyle = styled.input`
   &:focus + label,
   &.hasValue + label {
     transform: translate(14px, -6px) scale(0.75);
+    font-size: ${({ theme }) => theme.fontSize.xs};
+
 
     &.fail {
       color: ${({ theme }) => theme.alarmColor.fail.medium};
@@ -88,7 +90,7 @@ export const InputTextStyle = styled.input`
   &.hasValue ~ fieldset legend {
     max-width: 1000px;
     transition: max-width 100ms cubic-bezier(0, 0, 0.2, 1) 50ms;
-    font-size: ${({ theme }) => theme.fontSize.xxs};
+    font-size: ${({ theme }) => theme.fontSize.xxxs};
   }
 
   &:focus ~ .icon .password {
@@ -108,7 +110,7 @@ export const FieldsetStyle = styled.fieldset`
   right: 0;
   bottom: 0;
   margin: 0;
-  padding: 0 8px;
+  padding: 0 9px;
   overflow: hidden;
   position: absolute;
   border-radius: ${({ theme }) => theme.borderRadius.sm};
@@ -116,6 +118,7 @@ export const FieldsetStyle = styled.fieldset`
   border-style: solid;
   border-color: ${({ theme }) => theme.neutralColor[5]};
   pointer-events: none;
+  font-size: ${({ theme }) => theme.fontSize.xxxs};
 
   transition: border-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
@@ -133,7 +136,7 @@ export const FieldsetStyle = styled.fieldset`
     text-align: left;
     line-height: 1.1876em;
     letter-spacing: 0.00938em;
-    font-size: ${({ theme }) => theme.fontSize.xxs};
+    font-size: ${({ theme }) => theme.fontSize.xxxs};
     transition: max-width 50ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
     & > span {
