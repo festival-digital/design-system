@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const Smalltext = styled.text`
+export const Smalltext = styled.p`
 
 @media only screen and (max-width: 769px) {
-      
+
     ${(props) => `
       font-style: ${props.theme.fontFamily.primary};
       font-weight: ${props.theme.fontWeight.regular};
