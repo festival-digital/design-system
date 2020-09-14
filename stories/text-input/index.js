@@ -19,7 +19,6 @@ import buildClass from '../../util/buildClass';
 const hasError = (error) => error.length > 0;
 
 const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
-  const inputNode = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
   const [focus, setFocus] = useState(false);
 
@@ -30,7 +29,7 @@ const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
   const toggleShowPassword = () => {
     setShowPassword((prev) => !prev);
   };
-  
+
   return (
     <InputGroup>
       <InputBase>
