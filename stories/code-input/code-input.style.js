@@ -5,6 +5,8 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+
+  ${({ customStyle }) => customStyle}
 `;
 
 export const InputGroup = styled.div`

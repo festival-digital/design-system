@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InputGroup = styled.form`
+export const InputGroup = styled.div`
   display: block;
 `;
 
@@ -44,4 +44,6 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
       box-shadow: 0 0 0;
     }
   `}
+
+  ${({ customStyle }) => customStyle}
 `;

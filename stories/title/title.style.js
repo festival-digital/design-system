@@ -8,4 +8,6 @@ export const Title = styled.h1`
     line-height: ${props.theme.lineHeight.near};
     color: ${props.theme.brandColor.secondary.medium};
   `}
+
+  ${({ customStyle }) => customStyle}  
 `;  

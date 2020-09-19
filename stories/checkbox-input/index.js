@@ -4,11 +4,13 @@ import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
 import { InputGroup, Checkbox } from './checkbox.style.js'
 
-const InputCheckbox = ({ id, label, checked, ...props }) => {
+const InputCheckbox = ({
+  id, label, checked, customStyle, ...props
+}) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <InputGroup>
+    <InputGroup customStyle={customStyle}>
       <Checkbox
         {...props}
         checked={checked}
@@ -39,11 +41,13 @@ const InputCheckbox = ({ id, label, checked, ...props }) => {
 
 InputCheckbox.propTypes = {
   label: PropTypes.string,
+  customStyle: PropTypes.string,
   checked: PropTypes.bool,
 };
 
 InputCheckbox.defaultProps = {
   label: '',
+  customStyle: '',
   checked: false,
 };
 

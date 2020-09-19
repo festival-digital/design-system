@@ -21,6 +21,8 @@ export const Text = styled.text`
       color: ${props.theme.brandColor.secondary.medium};
     `}
   }
+
+  ${({ customStyle }) => customStyle}
 `;
 
 
