@@ -111,7 +111,7 @@ InputText.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
   customStyle: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'password']),
+  type: PropTypes.oneOf(['tel', 'email','text', 'password']),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
