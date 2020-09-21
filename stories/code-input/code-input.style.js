@@ -9,8 +9,9 @@ export const Container = styled.div`
 
 export const InputGroup = styled.div`
   display: grid;
-  grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, minmax(64px, 100px))`};
-  grid-gap: 10px;
+  grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, 1fr)`};
+  /* grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, minmax(64px, 100px))`}; */
+  /* grid-gap: 10px; */
   justify-content: center;
   justify-items: center;
 
@@ -41,8 +42,8 @@ export const MessageBox = styled.div`
 `;
 
 export const InputBox = styled.div`
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 
   border-width: ${({ theme }) => theme.borderWidth.thin};
   border-style: solid;
