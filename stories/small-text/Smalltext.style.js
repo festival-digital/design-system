@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Smalltext = styled.p`
+export const SmalltextComponent = styled.p`
 
 @media only screen and (max-width: 769px) {
 
@@ -20,4 +20,16 @@ export const Smalltext = styled.p`
       line-height: ${props.theme.lineHeight.compact};
       color: ${props.theme.brandColor.secondary.medium};
     `}}
+
+    &.text-success{
+      color: ${({theme}) => theme.alarmColor.success.medium};
+    }
+
+    &.text-fail{
+      color: ${({theme}) => theme.alarmColor.fail.medium};
+    }
+
+    &.text-warning{
+      color: ${({theme}) => theme.alarmColor.warning.medium};
+    }
   `;
