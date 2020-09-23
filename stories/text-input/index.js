@@ -107,7 +107,7 @@ InputText.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
-  type: PropTypes.oneOf(['text', 'password']),
+  type: PropTypes.oneOf(['email','text', 'password']),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
