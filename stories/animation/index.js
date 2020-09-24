@@ -11,11 +11,11 @@ import buildClass from '../../util/buildClass';
 
 
 
-const Animation = ({children,className, ...props }) => {
+const Animation = ({animation, delay, duration, children,className, ...props }) => {
 
   return (
     <Container {...props} className={className}>
-      <Animated >
+      <Animated animation={animation} delay={delay} duration={duration}>
         {children}
       </Animated>
     </Container>
