@@ -4,19 +4,22 @@ import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
 import { InputGroup, Checkbox } from './checkbox.style.js'
 
-const InputCheckbox = ({ id, label, checked, ...props }) => {
+const InputCheckbox = ({ id, label, checked, onClick, onChange, ...props }) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <InputGroup>
+    <InputGroup
+      onClick={onClick}
+    >
       <Checkbox
         {...props}
         checked={checked}
         id={id}
+        onChange={onChange}
       />
       <label htmlFor={id}>
         {label}
-        { 
+        {
           checked ? (
             <Icon
               style={{

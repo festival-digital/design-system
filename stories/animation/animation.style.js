@@ -17,7 +17,6 @@ export const Animated = styled.div`
   animation-fill-mode: both;
   transition: transform 0.6s ease-in;
   box-sizing: border-box;
-  overflow: hidden;
 
   @keyframes slideInUp{
     0% {
