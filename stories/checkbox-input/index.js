@@ -5,19 +5,20 @@ import PropTypes from 'prop-types';
 import { InputGroup, Checkbox } from './checkbox.style.js'
 
 const InputCheckbox = ({
-  id, label, checked, customStyle, ...props
+  id, children, checked, customStyle, ...props
 }) => {
   const theme = useContext(ThemeContext);
 
   return (
-    <InputGroup customStyle={customStyle}>
+    <InputGroup>
       <Checkbox
         {...props}
+        customStyle={customStyle}
         checked={checked}
         id={id}
       />
       <label htmlFor={id}>
-        {label}
+        {children}
         { 
           checked ? (
             <Icon
@@ -40,13 +41,13 @@ const InputCheckbox = ({
 };
 
 InputCheckbox.propTypes = {
-  label: PropTypes.string,
+  children: PropTypes.node,
   customStyle: PropTypes.string,
   checked: PropTypes.bool,
 };
 
 InputCheckbox.defaultProps = {
-  label: '',
+  children: <></>,
   customStyle: '',
   checked: false,
 };

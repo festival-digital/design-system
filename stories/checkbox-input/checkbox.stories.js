@@ -7,13 +7,13 @@ export default {
   argTypes: {},
 };
 
-const Template = (args) => {
-  return <InputCheckbox {...args} />;
+const Template = ({ children, ...args }) => {
+  return <InputCheckbox {...args}>{children}</InputCheckbox>;
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Label',
+  children: <>Label</>,
   checked: false
 };
 
@@ -34,7 +34,7 @@ Default.decorators = [
 
 export const Checked = Template.bind({});
 Checked.args = {
-  label: 'Label',
+  children: <>Label</>,
   checked: true
 };
 
