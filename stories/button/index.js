@@ -26,7 +26,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  isLoading: true,
+  isLoading: false,
   outline: false,
   white: false,
 };
