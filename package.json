@@ -1,6 +1,6 @@
 {
   "name": "@resystem/design-system",
-  "version": "0.0.40",
+  "version": "0.0.45",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -12,7 +12,6 @@
     "eslint:fix": "eslint --fix \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
     "build:production": "NODE_ENV=production webpack",
     "build:production:windows": "SET NODE_ENV=production && webpack"
-
   },
   "repository": {
     "type": "git",
