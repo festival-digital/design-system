@@ -83,7 +83,7 @@ export const InputBase = styled.input`
   padding: ${({ theme }) => theme.spacingInset.xxs};
   text-align: center;
   color: ${({ theme }) => theme.neutralColor[5]};
-  font-size: ${({ theme }) => theme.fontSize.xxl};
+  font-size: ${({ theme }) => theme.fontSize.xl};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
 
 `;
