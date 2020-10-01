@@ -6,7 +6,7 @@ export { default as Animation } from './animation';
 export { default as Button } from './button';
 export { default as ButtonText } from './button-text';
 export { default as CheckboxInput } from './checkbox-input';
-// export { default as CodeInput } from './code-input';
+export { default as CodeInput } from './code-input';
 export { default as IconButton } from './icon-button';
 export { default as IDALoginButton } from './ida-login-button';
 export { default as IDARegisterButton } from './ida-register-button';
