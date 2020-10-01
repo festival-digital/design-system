@@ -1,25 +1,44 @@
 import styled from 'styled-components';
 
 export const Text = styled.p`
+  display: flex;
+
+  & svg {
+    margin-right: 5px;
+  }
 
   @media only screen and (max-width: 769px) {
-    ${(props) => `
-      font-style: ${props.theme.fontFamily.primary};
-      font-weight: ${props.theme.fontWeight.regular};
-      font-size: ${props.theme.fontSize.xs};
-      line-height: ${props.theme.lineHeight.far};
-      color: ${props.theme.brandColor.secondary.medium};
-    `}
+    font-style: ${({theme}) => theme.fontFamily.primary};
+    font-weight: ${({theme}) => theme.fontWeight.regular};
+    font-size: ${({theme}) => theme.fontSize.xs};
+    line-height: ${({theme}) => theme.lineHeight.far};
+    color: ${({theme}) => theme.brandColor.secondary.medium};
+
+    & svg {
+      font-size: ${({theme}) => theme.fontSize.sm};
+    }
   }
 
   @media only screen and (min-width: 769px){
-    ${(props) => `
-      font-style: ${props.theme.fontFamily.primary};
-      font-weight: ${props.theme.fontWeight.regular};
-      font-size: ${props.theme.fontSize.sm};
-      line-height: ${props.theme.lineHeight.far};
-      color: ${props.theme.brandColor.secondary.medium};
-    `}
+    font-style: ${({theme}) => theme.fontFamily.primary};
+    font-weight: ${({theme}) => theme.fontWeight.regular};
+    font-size: ${({theme}) => theme.fontSize.sm};
+    line-height: ${({theme}) => theme.lineHeight.far};
+    color: ${({theme}) => theme.brandColor.secondary.medium};
+
+    & svg {
+      font-size: ${({theme}) => theme.fontSize.sm};
+    }
+  }
+
+  &.fail{
+    color: ${({theme}) => theme.alarmColor.fail.medium}
+  }
+  &.success{
+    color: ${({theme}) => theme.alarmColor.success.medium}
+  }
+  &.warning{
+    color: ${({theme}) => theme.alarmColor.warning.medium}
   }
 `;
 

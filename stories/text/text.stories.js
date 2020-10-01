@@ -17,22 +17,49 @@ const Template = (args) => (
   <Text {...args}>Texto Corpo Desktop e Mobile</Text>
 );
 
+const defaultDecorator =  (Story) => (
+  <div
+    style={{
+      padding: '30px',
+      width: '100%',
+      height: '100%',
+      background: '#000000',
+    }}
+  >
+    <Story />
+  </div>
+);
 
 export const Default = Template.bind({});
 Default.args = {};
 Default.decorators = [
-  (Story) => (
-    <div
-      style={{
-        padding: '30px',
-        width: '100%',
-        height: '100%',
-        background: '#000000',
-      }}
-    >
-      <Story />
-    </div>
-  ),
+  defaultDecorator
 ];
 
- 
+
+export const Success = Template.bind({});
+Success.args = {
+  variant: 'success',
+};
+Success.decorators = [
+  defaultDecorator,
+];
+
+
+export const Fail = Template.bind({});
+Fail.args = {
+  variant: 'fail',
+};
+Fail.decorators = [
+  defaultDecorator,
+];
+
+
+
+export const Warning = Template.bind({});
+Warning.args = {
+  variant: 'warning',
+};
+Warning.decorators = [
+  defaultDecorator,
+];
