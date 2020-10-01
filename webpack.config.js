@@ -26,11 +26,11 @@ module.exports = {
         // use: ['style-loader', 'css-loader'],
         // include: path.resolve(__dirname, './stories')
       // },
-    {
-      test: /\.css$/i,
-      use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      include: path.resolve(__dirname, './stories')
-    },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        // include: path.resolve(__dirname, './stories')
+      },
     ]
   }
 }
