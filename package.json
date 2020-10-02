@@ -1,10 +1,6 @@
 {
   "name": "@resystem/design-system",
-<<<<<<< HEAD
-  "version": "0.0.40",
-=======
-  "version": "0.0.47",
->>>>>>> cdb62a28faa514e9bd06d377e06fadec0f6f2e36
+  "version": "0.0.53",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -49,7 +45,11 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+<<<<<<< HEAD
     "mini-css-extract-plugin": "^0.11.1",
+=======
+    "mini-css-extract-plugin": "^0.11.2",
+>>>>>>> 3f660b9915f2c3357cb8a1327d6e94769a1374db
     "prettier": "^2.1.0",
     "react-is": "^16.13.1",
     "webpack": "^4.44.1",

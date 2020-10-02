@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
   Container,
@@ -18,6 +18,7 @@ import buildClass from '../../util/buildClass';
 const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => {
   const [inputId, setInputId] = useState(Array.apply(null, Array(codeSize)).map(() => enhancedCodeGenerator()));
   const [inputArray, setinputArray] = useState(Array.apply(null, Array(codeSize)).map(() => ''));
+  const [inputRef, setInputRef] = useState(Array.apply(null, Array(codeSize)).map(() => useRef(null)));
 
   const hasSpaceToAdd = (value, newArray) => {
     const filteredArray = newArray.filter((item) => item.length !== 0);
@@ -63,9 +64,9 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
 
     // definir o focus no input escolhido anteriormente
     if (hasSpaceToAdd(value, currentArray)) {
-      const input = document.getElementById(identifier);
-      input.focus();
-      input.setSelectionRange(1, 1);
+      const input = inputRef[inputId.indexOf(identifier)];
+      input.current.focus();
+      input.current.setSelectionRange(1, 1);
     }
 
   }
@@ -97,6 +98,7 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
                   data-identifier={item}
                   value={inputArray[index]}
                   onChange={handleChange}
+                  ref={inputRef[index]}
                 />
               </InputBox>
             )
