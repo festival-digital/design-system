@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Text = styled.text`
+export const Text = styled.p`
 
   @media only screen and (max-width: 769px) {
     ${(props) => `

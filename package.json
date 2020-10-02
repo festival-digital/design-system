@@ -1,6 +1,10 @@
 {
   "name": "@resystem/design-system",
+<<<<<<< HEAD
   "version": "0.0.40",
+=======
+  "version": "0.0.47",
+>>>>>>> cdb62a28faa514e9bd06d377e06fadec0f6f2e36
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -10,7 +14,8 @@
     "build-storybook": "build-storybook",
     "eslint": "eslint \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
     "eslint:fix": "eslint --fix \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
-    "build:production": "NODE_ENV=production webpack"
+    "build:production": "NODE_ENV=production webpack",
+    "build:production:windows": "SET NODE_ENV=production && webpack"
   },
   "repository": {
     "type": "git",

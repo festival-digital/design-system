@@ -25,7 +25,7 @@ const defaultDecorator = (Story) => (
         width: '320px',
         height: '300px',
         background: '#1D1D1D',
-        // border: '2px solid white',
+        border: '2px solid white',
       }}
     >
       <Story />
@@ -36,14 +36,14 @@ const defaultDecorator = (Story) => (
 );
 
 const Template = (args) => {
-  const [value, setValue] = useState(`MALETTA`);
-  return <CodeInput {...args} value={value} onChange={setValue} />;
+  const [value, setValue] = useState(``);
+  return <CodeInput {...args} value={value} onChange={setValue}/>;
 };
 
 export const Input = Template.bind({});
 Input.args = {
   error: '',
-  codeSize: 4,
+  codeSize: 6,
 };
 
 Input.decorators = [defaultDecorator];
@@ -93,6 +93,7 @@ const TemplateCodeSize = (args) => {
                 color: '#fff',
                 alignItems: 'center',
               }}
+              key={index}
             >
               <p
                style={{

@@ -11,8 +11,9 @@ export const Container = styled.div`
 
 export const InputGroup = styled.div`
   display: grid;
-  grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, minmax(64px, 100px))`};
-  grid-gap: 10px;
+  grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, 1fr)`};
+  /* grid-template-columns: ${({codeSize}) => `repeat(${codeSize}, minmax(64px, 100px))`}; */
+  /* grid-gap: 10px; */
   justify-content: center;
   justify-items: center;
 
@@ -43,8 +44,8 @@ export const MessageBox = styled.div`
 `;
 
 export const InputBox = styled.div`
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 
   border-width: ${({ theme }) => theme.borderWidth.thin};
   border-style: solid;
@@ -84,7 +85,7 @@ export const InputBase = styled.input`
   padding: ${({ theme }) => theme.spacingInset.xxs};
   text-align: center;
   color: ${({ theme }) => theme.neutralColor[5]};
-  font-size: ${({ theme }) => theme.fontSize.xxl};
+  font-size: ${({ theme }) => theme.fontSize.xl};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
 
 `;
