@@ -142,7 +142,7 @@ export const FieldsetStyle = styled.fieldset`
     & > span {
       display: inline-block;
       padding-left: 5px;
-      padding-right: 5px;
+      /* padding-right: 5px; */
     }
   }
 `;
@@ -184,3 +184,4 @@ export const IconContainer = styled.div`
     cursor: pointer;
   }
 `;
+
