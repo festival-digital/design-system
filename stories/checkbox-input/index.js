@@ -4,7 +4,7 @@ import { ThemeContext } from 'styled-components';
 import PropTypes from 'prop-types';
 import { InputGroup, Checkbox } from './checkbox.style.js'
 
-const InputCheckbox = ({ id, label, checked, onClick, onChange, ...props }) => {
+const InputCheckbox = ({ customStyle, id, label, checked, onClick, onChange, ...props }) => {
   const theme = useContext(ThemeContext);
 
   return (
