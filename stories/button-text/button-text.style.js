@@ -12,6 +12,8 @@ export const UnderlineButton = styled.button`
   background-color: transparent;
   cursor: pointer;
   text-decoration: underline;
+
+  ${({ customStyle }) => customStyle}
 `;
 
 export const ArrowButton = styled.button`
@@ -25,4 +27,6 @@ export const ArrowButton = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  ${({ customStyle }) => customStyle}
 `;

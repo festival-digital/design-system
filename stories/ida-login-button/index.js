@@ -14,28 +14,28 @@ const ALT_ICON_TEXT =
  * @param {boolean} args.dark flag for indentify if the component is defaut mode or dark mode
  * @returns {React.Component}
  */
-const IDALoginButton = ({ dark, small, ...props }) => {
+const IDALoginButton = ({ dark, small, text, ...props }) => {
   if (dark) {
     return (
-      <DarkButton {...props}>
+      <DarkButton small={small} {...props}>
         <Icon
           src={`${BASE_ICON_URI}/dark-brand.svg`}
           alt={ALT_ICON_TEXT}
           small={small}
         />
-        Fazer login
+        {text}
       </DarkButton>
     );
   }
 
   return (
-    <WhiteButton {...props}>
+    <WhiteButton small={small} {...props}>
       <Icon
         src={`${BASE_ICON_URI}/white-brand.svg`}
         alt={ALT_ICON_TEXT}
         small={small}
       />
-      Fazer login
+      {text}
     </WhiteButton>
   );
 };
@@ -43,11 +43,13 @@ const IDALoginButton = ({ dark, small, ...props }) => {
 IDALoginButton.propTypes = {
   dark: PropTypes.bool,
   small: PropTypes.bool,
+  text: PropTypes.string,
 };
 
 IDALoginButton.defaultProps = {
   dark: false,
   small: false,
+  text: 'Fazer login',
 };
 
 export default IDALoginButton;

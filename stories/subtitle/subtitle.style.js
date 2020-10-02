@@ -8,6 +8,8 @@ export const Subtitle = styled.h2`
     line-height: ${props.theme.lineHeight.far};
     color: ${props.theme.brandColor.secondary.medium};
   `}
+
+  ${({ customStyle }) => customStyle}
 `;  
 
 export const SubtitleSmall = styled.h3`
@@ -18,5 +20,7 @@ export const SubtitleSmall = styled.h3`
     line-height: ${props.theme.lineHeight.far};
     color: ${props.theme.brandColor.secondary.medium};
   `}
+
+  ${({ customStyle }) => customStyle}
 `;  
 

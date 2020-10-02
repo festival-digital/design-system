@@ -38,4 +38,6 @@ export const Button = styled.button`
       } 
     }
   `}
+
+  ${({ customStyle }) => customStyle}  
 `;

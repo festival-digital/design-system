@@ -10,9 +10,10 @@ export const SmalltextComponent = styled.p`
       font-size: ${props.theme.fontSize.xxxs};
       line-height: ${props.theme.lineHeight.compact};
       color: ${props.theme.brandColor.secondary.medium};
-    `}}
+    `}
+  }
 
-@media only screen and (min-width: 769px){
+  @media only screen and (min-width: 769px){
     ${(props) => `
       font-style: ${props.theme.fontFamily.primary};
       font-weight: ${props.theme.fontWeight.regular};
@@ -32,4 +33,6 @@ export const SmalltextComponent = styled.p`
     &.text-warning{
       color: ${({theme}) => theme.alarmColor.warning.medium};
     }
+
+    ${({ customStyle }) => customStyle}
   `;

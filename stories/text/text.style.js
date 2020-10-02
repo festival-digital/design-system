@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Text = styled.p`
   display: flex;
+  align-items: center;
 
   & svg {
     margin-right: 5px;
@@ -40,6 +41,8 @@ export const Text = styled.p`
   &.warning{
     color: ${({theme}) => theme.alarmColor.warning.medium}
   }
+
+  ${({ customStyle }) => customStyle}
 `;
 
 

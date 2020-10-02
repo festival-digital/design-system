@@ -26,6 +26,7 @@ const renderOptions = ({
   <SwitchButtonOption
     key={option.id}
     type="button"
+    onClick={() => { onClick({ id: option.id, index }) }}
     small={small}
     actived={selectedIndex === index}
     position={getPosition(index, options.length)}

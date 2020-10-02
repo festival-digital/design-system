@@ -13,6 +13,7 @@ const InputCheckbox = ({ id, label, checked, onClick, onChange, ...props }) => {
     >
       <Checkbox
         {...props}
+        customStyle={customStyle}
         checked={checked}
         id={id}
         onChange={onChange}
@@ -41,12 +42,14 @@ const InputCheckbox = ({ id, label, checked, onClick, onChange, ...props }) => {
 };
 
 InputCheckbox.propTypes = {
-  label: PropTypes.string,
+  children: PropTypes.node,
+  customStyle: PropTypes.string,
   checked: PropTypes.bool,
 };
 
 InputCheckbox.defaultProps = {
-  label: '',
+  children: <></>,
+  customStyle: '',
   checked: false,
 };
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InputGroup = styled.form`
+export const InputGroup = styled.div`
   display: block;
 `;
 
@@ -19,10 +19,9 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
     }
 
     &:hover + label:before {
-    background: #525252;
-    box-shadow: 0 0 0 2px #525252;
+      background: #525252;
+      box-shadow: 0 0 0 2px #525252;
     }
-
 
     & + label:before {
       content: '';
@@ -44,9 +43,7 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
       border-color: ${theme.brandColor.primary.medium};
       box-shadow: 0 0 0;
     }
+  `}
 
-
-    `}
+  ${({ customStyle }) => customStyle}
 `;
-
-

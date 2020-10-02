@@ -2,7 +2,6 @@ import React, {createContext, useState, useEffect} from 'react';
 import Toaster from '../toaster';
 import PropTypes from 'prop-types';
 
-
 const ToasterContext = createContext();
 
 export const ToasterProvider = ({children})=>{

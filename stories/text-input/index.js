@@ -18,7 +18,10 @@ import buildClass from '../../util/buildClass';
 
 const hasError = (error) => error.length > 0;
 
-const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
+const InputText = ({
+  error, id, label, onChange,
+  customStyle, type, value, ...props
+}) => {
   const [showPassword, setShowPassword] = useState(false);
   const [focus, setFocus] = useState(false);
 
@@ -31,7 +34,7 @@ const InputText = ({ error, id, label, onChange, type, value, ...props }) => {
   };
 
   return (
-    <InputGroup>
+    <InputGroup customStyle={customStyle}>
       <InputBase>
         <InputTextStyle
           {...props}
@@ -107,11 +110,13 @@ InputText.propTypes = {
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func,
-  type: PropTypes.oneOf(['email','text', 'password']),
+  customStyle: PropTypes.string,
+  type: PropTypes.oneOf(['tel', 'email','text', 'password']),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 InputText.defaultProps = {
+  customStyle: '',
   error: '',
   label: '',
   onChange: () => {},

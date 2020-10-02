@@ -58,6 +58,8 @@ export const FilledButton = styled.button`
       cursor: not-allowed;
     }
   `}
+
+  ${({ customStyle }) => customStyle}
 `;
 
 export const OutlineButton = styled.button`
@@ -112,6 +114,8 @@ export const OutlineButton = styled.button`
       cursor: not-allowed;
     }
   `}
+
+  ${({ customStyle }) => customStyle}
 `;
 
 export const Loader = styled.div`

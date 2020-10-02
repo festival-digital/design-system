@@ -21,15 +21,10 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader']
       },
-      // {
-        // test: /\.css$/,
-        // use: ['style-loader', 'css-loader'],
-        // include: path.resolve(__dirname, './stories')
-      // },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        // include: path.resolve(__dirname, './stories')
+        include: path.resolve(__dirname, './stories')
       },
     ]
   }
