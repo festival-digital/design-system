@@ -36,7 +36,7 @@ const Subtitle = ({ type, ...props }) => {
 }
 
 Subtitle.propTypes = {
-  className : PropTypes.string;
+  className : PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   type: PropTypes.string,
 };
