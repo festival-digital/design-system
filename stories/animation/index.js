@@ -23,6 +23,7 @@ const Animation = ({animation, delay, duration, children,className, ...props }) 
 };
 
 Animation.propTypes = {
+  className: PropTypes.string,
   animation: PropTypes.oneOf(['slideInUp','slideInRight','slideInDown','slideInLeft','slideOutUp','slideOutRight',
   'slideOutDown','slideOutLeft']),
   delay: PropTypes.string,
@@ -31,6 +32,7 @@ Animation.propTypes = {
 };
 
 Animation.defaultProps = {
+  className: null,
   animation: 'slideInRight',
   delay: '0s',
   duration: '1s',

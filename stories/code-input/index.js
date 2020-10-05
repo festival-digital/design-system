@@ -15,7 +15,7 @@ import buildClass from '../../util/buildClass';
 
 
 
-const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => {
+const CodeInput = ({ className, codeSize, error, id, onChange, type, value, ...props }) => {
   const [inputId, setInputId] = useState(Array.apply(null, Array(codeSize)).map(() => enhancedCodeGenerator()));
   const [inputArray, setinputArray] = useState(Array.apply(null, Array(codeSize)).map(() => ''));
   const [inputRef, setInputRef] = useState(Array.apply(null, Array(codeSize)).map(() => useRef(null)));
@@ -87,7 +87,7 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
   const isFilled = (array) => array.filter((item) => item.length !== 0).length === codeSize ? true : false;
 
   return (
-    <Container {...props}>
+    <Container {...props} className={className}>
       <InputGroup codeSize={codeSize}>
         {
           inputId.map((item, index) => {
@@ -114,6 +114,7 @@ const CodeInput = ({ codeSize, error, id, onChange, type, value, ...props }) => 
 };
 
 CodeInput.propTypes = {
+  className: PropTypes.string,
   codeSize: PropTypes.number,
   error: PropTypes.string,
   onChange: PropTypes.func,
@@ -121,6 +122,7 @@ CodeInput.propTypes = {
 };
 
 CodeInput.defaultProps = {
+  className: null,
   codeSize: 4,
   error: '',
   onChange: () => { },

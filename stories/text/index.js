@@ -25,17 +25,19 @@ const SwitchIcon = ({variant}) => {
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const Text = ({ children,variant, ...props }) => (
-  <TextComponent {...props} className={buildClass({[variant] : true})}>
+const Text = ({ className, children,variant, ...props }) => (
+  <TextComponent {...props} className={buildClass({[variant] : true, [className] : className})}>
     <SwitchIcon variant={variant}/>  <span>{children}</span>
   </TextComponent>
 );
 
 Text.defaultProps = {
+  className: null,
   variant: 'default',
 }
 
 Text.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   variant: PropTypes.oneOf(['default','fail','success', 'warning'])
 };

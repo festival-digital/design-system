@@ -10,15 +10,16 @@ import { FilledButton, OutlineButton, Loader } from './button.style';
  * @param {boolean} args.outline flag for indentify if the component is small or large
  * @returns {React.Component}
  */
-const Button = ({ children, outline, ...props }) => {
+const Button = ({ className, children, outline, ...props }) => {
   if (outline) {
-    return <OutlineButton {...props}><Loader {...props}/> <span>{children}</span></OutlineButton>;
+    return <OutlineButton {...props} className={className}><Loader {...props}/> <span>{children}</span></OutlineButton>;
   }
 
-  return <FilledButton {...props}><Loader {...props}/> <span>{children}</span></FilledButton>;
+  return <FilledButton {...props}  className={className}><Loader {...props}/> <span>{children}</span></FilledButton>;
 };
 
 Button.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   isLoading: PropTypes.bool,
   outline: PropTypes.bool,
@@ -26,6 +27,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: null,
   isLoading: false,
   outline: false,
   white: false,

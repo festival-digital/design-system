@@ -8,8 +8,8 @@ import { SubtitleSmall as SubtitleSmallComponent } from './subtitle.style';
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const renderDefault = ({ children, ...props }) => (
-  <SubtitleComponent {...props}>
+const renderDefault = ({className, children, ...props }) => (
+  <SubtitleComponent {...props} className={className}>
     {children}
   </SubtitleComponent>
 );
@@ -19,15 +19,15 @@ const renderDefault = ({ children, ...props }) => (
  * @param {object} args proptypes to be pass to the component
  * @returns {React.Component}
  */
-const renderSmall = ({ children, ...props }) => (
-  <SubtitleSmallComponent {...props}>
+const renderSmall = ({ className, children, ...props }) => (
+  <SubtitleSmallComponent {...props} className={className}>
     {children}
   </SubtitleSmallComponent>
 );
 
 const types = {
   h2: renderDefault,
-  h3: renderSmall, 
+  h3: renderSmall,
 };
 
 const Subtitle = ({ type, ...props }) => {
@@ -36,14 +36,15 @@ const Subtitle = ({ type, ...props }) => {
 }
 
 Subtitle.propTypes = {
+  className : PropTypes.string;
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   type: PropTypes.string,
 };
 
 Subtitle.defaultProps = {
   type: 'h2',
+  className: null,
 };
 
 export default Subtitle;
 
- 
