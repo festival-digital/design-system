@@ -35,7 +35,7 @@ const IDARegisterButton = ({ dark, small, text,  ...props }) => {
         alt={ALT_ICON_TEXT}
         small={small}
       />
-      Cadastre-se
+      {text ? text : 'Cadastre-se'}
     </WhiteButton>
   );
 };
