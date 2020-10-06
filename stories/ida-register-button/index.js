@@ -14,7 +14,7 @@ const ALT_ICON_TEXT =
  * @param {boolean} args.dark flag for indentify if the component is defaut mode or dark mode
  * @returns {React.Component}
  */
-const IDARegisterButton = ({ dark, small, ...props }) => {
+const IDARegisterButton = ({ dark, small, text,  ...props }) => {
   if (dark) {
     return (
       <DarkButton {...props}>
@@ -23,7 +23,7 @@ const IDARegisterButton = ({ dark, small, ...props }) => {
           alt={ALT_ICON_TEXT}
           small={small}
         />
-        Cadastre-se
+        {text ? text : 'Cadastre-se'}
       </DarkButton>
     );
   }
@@ -43,6 +43,7 @@ const IDARegisterButton = ({ dark, small, ...props }) => {
 IDARegisterButton.propTypes = {
   dark: PropTypes.bool,
   small: PropTypes.bool,
+  text: PropTypes.string,
 };
 
 IDARegisterButton.defaultProps = {
