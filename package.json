@@ -11,7 +11,7 @@
     "eslint": "eslint \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
     "eslint:fix": "eslint --fix \"./stories/**/*.js\" \"./stories/**/*.jsx\" --no-error-on-unmatched-pattern",
     "build:production": "NODE_ENV=production webpack",
-    "build:production:windows": "SET NODE_ENV=production && webpack"
+    "wbuild": "SET NODE_ENV=production && webpack"
   },
   "repository": {
     "type": "git",
