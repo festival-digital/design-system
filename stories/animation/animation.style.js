@@ -13,7 +13,7 @@ export const Animated = styled.div`
   position: relative;
   height: auto;
   width: auto;
-  animation-name: ${({animation}) => animation };;
+  animation-name: ${({animation}) => animation };
   animation-duration: ${({duration}) => duration };
   animation-delay: ${({delay}) => delay };
   animation-fill-mode: both;
