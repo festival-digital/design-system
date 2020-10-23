@@ -5,6 +5,8 @@ export const Container = styled.div`
   height: auto;
   width: auto;
   overflow: hidden;
+
+  ${({ customStyle }) => customStyle}
 `;
 
 export const Animated = styled.div`
@@ -103,16 +105,15 @@ export const Animated = styled.div`
 
   @keyframes slideOutLeft{
     0% {
-      -webkit-transform: translate3d(-100%,0,0);
-      transform: translate3d(-100%,0,0);
-      visibility: visible;
-    }
-    100% {
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
+    100% {
+      visibility: hidden;
+      -webkit-transform: translate3d(-100%,0,0);
+      transform: translate3d(-100%,0,0);
+    }
   }
-
 
 
 `;

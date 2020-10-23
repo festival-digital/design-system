@@ -11,7 +11,7 @@ import buildClass from '../../util/buildClass';
 
 
 
-const Animation = ({animation, delay, duration, children,className, ...props }) => {
+const Animation = ({animation, delay, duration, children,className, customStyle, ...props }) => {
 
   return (
     <Container {...props} className={className}>
@@ -28,6 +28,7 @@ Animation.propTypes = {
   'slideOutDown','slideOutLeft']),
   delay: PropTypes.string,
   duration: PropTypes.string,
+  customStyle: PropTypes.string,
 
 };
 
@@ -36,6 +37,7 @@ Animation.defaultProps = {
   animation: 'slideInRight',
   delay: '0s',
   duration: '1s',
+  customStyle: '',
 };
 
 
